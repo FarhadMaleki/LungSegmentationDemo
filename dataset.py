@@ -19,8 +19,7 @@ class IMGDataset(Dataset):
         self.data = [dict(x) for _, x in data.iterrows()]
 
     def __len__(self):
-        return 50
-        # return len(self.data)
+        return len(self.data)
 
     def __getitem__(self, item):
         datapoint = self.data[item]
